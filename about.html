@@ -9,14 +9,17 @@
 </head>
 <body>
 	<header class="nav">
-		<div class="logo">
-			<img src="Logo.png" class="icon">
-			<h1>Sivasakthi Graphics</h1>
-		</div>
-		<a href="index.html" class="active">Home</a>
-		<a href="about.html" class="active1">About</a>
-		<a href="services.html" class="active2">Service</a>
-		<a href="contact.html" class="active3">Contact</a>
+  		<div class="logo">
+    		<img src="Logo.png" class="icon">
+    		<h1>Sivasakthi Graphics</h1>
+    		<div class="hamburger" onclick="toggleMenu()">☰</div>
+  		</div>
+ 	 	<nav class="nav-links" id="navLinks">
+    		<a href="index.html">Home</a>
+    		<a href="about.html" class="active">About</a>
+    		<a href="services.html">Service</a>
+    		<a href="contact.html">Contact</a>
+  		</nav>
 	</header>
 	
 	<section id="about">
@@ -49,5 +52,12 @@
 	<footer>
     	<p>&copy; 2025 Sivasakthi Graphics. All rights reserved.</p>
  	</footer>
+
+ 	<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
