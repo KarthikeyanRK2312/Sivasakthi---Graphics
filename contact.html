@@ -6,24 +6,20 @@
 	<title>Sivasakthi Graphics</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/x-icon" href="Logo.png">
-	<script>
-		document.getElementById('contactForm').addEventListener('submit', function(event) {
-  		event.preventDefault();
-  		alert('Thank you for contacting Sivasakthi Graphics! We will get back to you soon.');
-  		this.reset;
-	});
-	</script>
 </head>
 <body>
 	<header class="nav">
-		<div class="logo">
-			<img src="Logo.png" class="icon">
-			<h1>Sivasakthi Graphics</h1>
-		</div>
-		<a href="index.html" class="active">Home</a>
-		<a href="about.html" class="active1">About</a>
-		<a href="services.html" class="active2">Service</a>
-		<a href="contact.html" class="active3">Contact</a>
+  		<div class="logo">
+    		<img src="Logo.png" class="icon">
+    		<h1>Sivasakthi Graphics</h1>
+    		<div class="hamburger" onclick="toggleMenu()">☰</div>
+  		</div>
+ 	 	<nav class="nav-links" id="navLinks">
+    		<a href="index.html">Home</a>
+    		<a href="about.html">About</a>
+    		<a href="services.html">Service</a>
+    		<a href="contact.html" class="active">Contact</a>
+  		</nav>
 	</header>
 	
 	<section id="contact" style="margin-bottom: 252px;">
@@ -36,7 +32,7 @@
 				</div>
 				<div class="info-item">
 					<h4>Phone</h4><br>
-					<p class="para">+91-9840986080</p>
+					<p class="para">+91 9840986080</p>
 				</div>
 				<div class="info-item">
 					<h4>Email</h4><br>
@@ -48,5 +44,12 @@
 	<footer>
     	<p>&copy; 2025 Sivasakthi Graphics. All rights reserved.</p>
  	</footer>
+
+ 	<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
